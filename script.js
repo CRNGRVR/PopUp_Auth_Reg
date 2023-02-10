@@ -60,27 +60,31 @@ function reg_click(){
     let password = reg_password.value
     let name = reg_name.value
 
+    let f = false
+
     for (const key in users) {
         
         if(users[key]["login"] == login){
             alert("Логин уже занят.")
             reg_login.value = ""
-            break
+            f = true
+            return
         }
-        else{
-            users[login] = {
-                "login": login,
-                "password": password,
-                "name": name
-            }
+    }
 
-            currentUser = users[login]
-            succes_login()
-
-            alert("Регистрация успешна.")
-            
-            text.innerHTML = `Добро пожалоавть, ${currentUser["name"]}!`
+    if(f != true){
+        users[login] = {
+            "login": login,
+            "password": password,
+            "name": name
         }
+
+        currentUser = users[login]
+        succes_login()
+
+        alert("Регистрация успешна.")
+        
+        text.innerHTML = `Добро пожалоавть, ${currentUser["name"]}!`
     }
 }
 
