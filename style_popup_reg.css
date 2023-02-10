@@ -1,0 +1,35 @@
+.popup_reg{
+    display: block;
+    width: 25%;
+    margin: auto;
+    padding: 20px 10px;
+
+    text-align: center;
+
+    background-color: rgb(255, 238, 2);
+    border-radius: 10px;
+
+    position: relative;
+    transition: 1.0s all;
+    top: -999px;
+    
+}
+
+.popup_reg input{
+    display: block;
+
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+
+    margin: 10px auto;
+}
+
+.reg_submit{
+    background-color: rgb(102, 0, 255);
+}
+
+#modal_reg:checked ~ .popup_reg{
+    top: -200px;
+}

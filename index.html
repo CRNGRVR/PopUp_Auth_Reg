@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_popup_auth.css">
+    <link rel="stylesheet" href="style_popup_reg.css">
+    <link rel="stylesheet" href="style_content.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        
+        <input type="checkbox" id="modal_auth">
+        <label class="label_auth" for="modal_auth">Авторизация</label>
+
+        <input type="checkbox" id="modal_reg">
+        <label class="label_reg" for="modal_reg">Регистрация</label>
+
+
+        <form class="popup_auth" action="">
+            <span>Авторизация</span>
+            <input type="text" name="" id="auth_login" placeholder="Логин">
+            <input type="password" name="" id="auth_password" placeholder="Пароль">
+            <input class="auth_submit" type="button" value="Войти в аккаунт">
+        </form>
+
+        <form class="popup_reg" action="">
+            <span>Регистрация</span>
+            <input type="text" id="reg_name" placeholder="Имя">
+            <input type="text" id="reg_login" placeholder="Логин">
+            <input type="password" id="reg_password" placeholder="Пароль">
+            <input class="reg_submit" type="button" value="Создать аккаунт">
+        </form>
+
+    </div>
+
+    <div class="content" style="display: none;">
+
+        <div class="toppanel">
+            <input class="personal" type="button" value="Личный кабинет">
+            <input class="logout" type="button" value="Выход">
+        </div>
+
+        <div class="text"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
